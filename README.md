@@ -27,11 +27,10 @@ On Relaying party:
 - OAuth2 Pushed Authorization Request
 
 For Wallet integration:
-- OpenID4VCI draft 15
-- OpenID4VP draft 21,24,28 (selectable by variable)
+- OpenID4VP 1.0
 - Iso 18013:5 extension for OpenID4VP
-- SD-JWT for issuance
-- High Assurance profile for OIDC4VC
+- SD-JWT
+
 - High Assurance profile for OIDC4VP
 
 Please note that Presentation definition is supported only in OpenIDVP draft 21 and 24, and will be removed in near future. 
@@ -40,6 +39,8 @@ Please note that Presentation definition is supported only in OpenIDVP draft 21 
 QEAA Issuer
 
 Relaying party
+- OpenID4VCI
+- High Assurance profile for OIDC4VC
 - OAuth2 Rich Authorization Request
 - CSC 2.0 API
 - QES resolution between Wallet Centric and QTSP model
