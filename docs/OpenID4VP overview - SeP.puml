@@ -14,8 +14,8 @@ activate ServiceProvider
 ServiceProvider -> WalletAPI:  POST /auth
 note left of ServiceProvider: Auth endpoint POST usage
 activate WalletAPI
-  return 200 SIOPv2 + OIDC4VP authorization request
-ServiceProvider -> ServiceProvider: display QR code / link
+  return 200  Signed OIDC4VP authorization request
+ServiceProvider -> ServiceProvider: display QR code / link / DC API
   loop ServiceProvider polling
     ServiceProvider -> WalletAPI: /status
     activate WalletAPI
@@ -24,8 +24,8 @@ ServiceProvider -> ServiceProvider: display QR code / link
 deactivate ServiceProvider
 
 activate EUDIW
-EUDIW -> EUDIW: Scan QR code
-EUDIW -> EUDIW: get consent and prepare VP and SIOPv2 response
+EUDIW -> EUDIW: Scan QR code / Invoke with DC API
+EUDIW -> EUDIW: get consent and prepare VP response
 opt DIRECT POST
   EUDIW -> WalletAPI: POST /callback
   activate WalletAPI
@@ -38,7 +38,7 @@ end
       return Thank you page   
 activate ServiceProvider
 ServiceProvider -> ServiceProvider: auth status = DONE 
-ServiceProvider -> WalletAPI: GET original auth link
+ServiceProvider -> WalletAPI: POST original auth link
 activate WalletAPI
   return 302 original callback uri with code
 ServiceProvider -> WalletAPI: /token

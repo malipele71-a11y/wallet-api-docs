@@ -16,7 +16,7 @@ alt Auth endpoint GET usage
       return 302 /login
     Browser -> WalletAPI: /login
     activate WalletAPI
-      return login page with QR code / link
+      return login page with QR code / link / DC API link
     loop UserAgent polling
       Browser -> WalletAPI: /status
       activate WalletAPI
@@ -26,7 +26,7 @@ alt Auth endpoint GET usage
 
 end
 activate EUDIW
-EUDIW -> EUDIW: Scan QR code
+EUDIW -> EUDIW: Scan QR code / Invoked via DC API
 EUDIW -> EUDIW: get consent and prepare VP and SIOPv2 response
 opt DIRECT POST
   EUDIW -> WalletAPI: POST /callback

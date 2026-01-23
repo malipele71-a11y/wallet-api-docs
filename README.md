@@ -6,10 +6,10 @@ This is documentation of Bank iD's API for integration of Relaying parties to EU
 This API documentation is Work in Progress and aims at supporting Wallet PoC.
 Not all functionality may be supported. Please consult us via issue or Discord before using it.
 
-Should you find any bug or inconsistency please create issue in repo.
-Should you have any request for functionality please create issue in repo.
+Should you find any bug or inconsistency, please create an issue in repo.
+Should you have any request for functionality, please create an issue in repo.
 
-You can also contact us by Discord https://discord.gg/XnK7yvHD
+You can also contact us by Discord https://discord.gg/yaNMRx9hSw
 
 ## Structure
 Docs has following parts:
@@ -33,23 +33,10 @@ For Wallet integration:
 
 - High Assurance profile for OIDC4VP
 
-Please note that Presentation definition is supported only in OpenIDVP draft 21 and 24, and will be removed in near future. 
 ## Funcionality and Protocols in progress
+Currently project is under heavy development based on WE BUILD and APTITUDE requirements. 
+For overview of functionality and protocols in progress please check [Project Board](https://github.com/orgs/BankovniIdentita/projects/1)
 
-QEAA Issuer
-
-Relaying party
-- OpenID4VCI
-- High Assurance profile for OIDC4VC
-- OAuth2 Rich Authorization Request
-- CSC 2.0 API
-- QES resolution between Wallet Centric and QTSP model
-- Proof Key for Code Exchange by OAuth Public Clients (PKCE)
-
-Wallet integration:
-- Transaction data in OpenID4VP (Document Signature, Payments)
-- Wallet centric QES
-- QTSP centric QES
  
 
 
